@@ -16,12 +16,12 @@ X = my_data[:,:2]
 class_true = my_data[:, 2]
 Class_onehot = np_utils.to_categorical(class_true) # one hot encoding
 
-# create the model
+# create the model (2 layer NN, with 100 neurons in the first layer)
 model_NN = Sequential()
 model_NN.add(Dense(100, input_dim=2, kernel_initializer='normal', activation='relu'))
 model_NN.add(Dense(3, activation='softmax'))
 model_NN.compile(optimizer='rmsprop', loss='categorical_crossentropy', metrics=['accuracy'])
-model_NN.fit(X, Class_onehot, epochs=1200, batch_size=100)
+model_NN.fit(X, Class_onehot, epochs=1500, batch_size=100)
 
 '''
 # evaluate the classification result
@@ -32,7 +32,7 @@ class_pred = np.argmax(class_pred, axis=1)
 '''
 
 # plot the classification result
-# define the decision boundary. for that, we will assign a color to each point in the mesh [x_min, x_max]*[y_min, y_max].
+# define the classification region. for that, we will assign a color to each point in the mesh [x_min, x_max]*[y_min, y_max].
 x_min, x_max = my_data[:, 0].min() - .5, my_data[:, 0].max() + .5
 y_min, y_max = my_data[:, 1].min() - .5, my_data[:, 1].max() + .5
 h = 0.01  # step size in the mesh

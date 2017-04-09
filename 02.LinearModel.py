@@ -37,7 +37,7 @@ note that
 '''
 
 # plot the classification result
-# define the decision boundary. for that, we will assign a color to each point in the mesh [x_min, x_max]*[y_min, y_max].
+# define the classification region. for that, we will assign a color to each point in the mesh [x_min, x_max]*[y_min, y_max].
 x_min, x_max = my_data[:, 0].min() - .5, my_data[:, 0].max() + .5
 y_min, y_max = my_data[:, 1].min() - .5, my_data[:, 1].max() + .5
 h = 0.01  # step size in the mesh
