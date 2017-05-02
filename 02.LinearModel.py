@@ -59,3 +59,8 @@ ax.legend()
 ax.set(xlabel='X', ylabel='Y', title='classification result for linear model')
 # fig.show()
 fig.savefig('pic/linear_result.png', dpi=fig.dpi)
+
+# some plot commands
+# ax.set_xlim(xmin=x_min, xmax=x_max)
+# ax.set_ylim(ymin=y_min, ymax=y_max)
+# ax.set_facecolor('#fff2cc')
