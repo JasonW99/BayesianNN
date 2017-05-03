@@ -5,6 +5,7 @@ import numpy as np
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.utils import np_utils
+
 import matplotlib
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -18,8 +19,8 @@ Class_onehot = np_utils.to_categorical(class_true) # one hot encoding
 
 # create the model (2 layer NN, with 100 neurons in the first layer)
 model_NN = Sequential()
-model_NN.add(Dense(100, input_dim=2, kernel_initializer='normal', activation='relu'))
-model_NN.add(Dense(3, activation='softmax'))
+model_NN.add(Dense(100, input_dim=2, kernel_initializer='normal', use_bias=True, activation='relu'))
+model_NN.add(Dense(3, use_bias=True,activation='softmax'))
 model_NN.compile(optimizer='rmsprop', loss='categorical_crossentropy', metrics=['accuracy'])
 model_NN.fit(X, Class_onehot, epochs=1500, batch_size=100)
 
@@ -54,4 +55,4 @@ sns.despine()
 ax.legend()
 ax.set(xlabel='X', ylabel='Y', title='classification result for neural network model')
 fig.show()
-fig.savefig('pic/NN_result.png', dpi=fig.dpi)
+fig.savefig('pic/NN_frequentist_result.png', dpi=fig.dpi)
