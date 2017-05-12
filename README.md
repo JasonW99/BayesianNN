@@ -1,6 +1,6 @@
 # Project Title
 
-![alt text](https://github.com/JasonW99/BayesianNN/blob/master/pic/data_set.png)
+![alt text](/pic/linear_result.png)
 
 
 ## Getting Started
