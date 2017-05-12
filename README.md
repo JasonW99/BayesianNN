@@ -3,7 +3,7 @@ solve a neural network classification problem using Bayesian approach.
 ## The Data Set
 2 dimensional data comes from 3 groups. using it as training data, we propose models to classify points into appropriate groups.
 
-![alt text](/pic/data_set.png=600x)
+![alt text](/pic/data_set.png|width=200)
 ## Linear Model
 we firstly propose a linear model (GLM in multinomial case). clearly, the result is not good.
 
